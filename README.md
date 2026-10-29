@@ -1,48 +1,29 @@
-# 🌐 Portafolio Personal — David Ardila
+# Portafolio — David Alejandro Ardila Cardozo
 
-¡Hey! 👋 Soy **David Alejandro Ardila Cardozo**, estudiante de **Ingeniería de Sistemas** y desarrollador con pasión por el código, el diseño y la creación de proyectos con propósito.  
-Este es mi **portafolio web**, donde muestro mis proyectos, habilidades y un poco de quién soy.
+Portafolio personal de un desarrollador backend junior en Bucaramanga, Colombia. Presenta proyectos académicos, habilidades técnicas, formación y medios de contacto.
 
----
+## Ver el sitio
 
-## 🚀 Demo en línea
-👉 **Explora mi portafolio aquí:**  
-🔗 [https://davida282.github.io/Portafolio/](https://davida282.github.io/Portafolio/)
+Abre `index.html` en un navegador. El sitio está hecho con HTML y CSS, sin proceso de compilación ni dependencias de JavaScript.
 
----
+Demo publicada: [davida282.github.io/Portafolio](https://davida282.github.io/Portafolio/)
 
-## 🧠 Sobre el proyecto
+## Archivos
 
-Este portafolio fue desarrollado para representar mi identidad profesional como programador.  
-Mi objetivo fue crear un sitio moderno, fluido y visualmente atractivo donde pueda mostrar mis proyectos personales, estudios y experiencias.
+- `index.html`: contenido y estructura de la página.
+- `styles.css`: diseño y adaptación a pantallas pequeñas.
+- `assets/Hoja de Vida.pdf`: hoja de vida descargable.
+- `assets/Perfil.jpg`: foto conservada como recurso, aunque el diseño actual no la muestra.
+- `assets/acme-bank-preview.png`: captura de la demo pública de ACME Bank.
+- `assets/gestion-bodegas-preview.png`: captura de la pantalla de acceso del código de Gestión de Bodegas.
+- `assets/happyfeet-esquema.svg`: esquema visual de la estructura documentada de HappyFeet.
 
-Incluye:
-- 💼 Sección de proyectos destacados  
-- 📄 Información personal y académica  
-- 🧩 Habilidades técnicas y blandas  
-- 📬 Medios de contacto directo  
+## Contenido destacado
 
----
+- ACME Bank: autogestión bancaria simulada con JavaScript, HTML y CSS.
+- Gestión de Bodegas: inventario con Java, Spring Boot y tecnologías web.
+- HappyFeet: gestión veterinaria con Java, JDBC y MySQL.
 
-## 🛠️ Tecnologías utilizadas
+Las fichas de proyecto presentan el problema, el aporte personal y el resultado. ACME Bank también enlaza una demo pública. La información de la participación personal se mantiene alineada con la hoja de vida; el repositorio público de ACME puede incluir funcionalidades desarrolladas después.
 
-- **HTML5** — estructura y semántica  
-- **CSS3** — estilos, animaciones y responsive design  
-- **JavaScript** — interactividad y funcionalidad dinámica  
-- **GitHub Pages** — para el despliegue del sitio  
-
----
-
-## ⚙️ Cómo ejecutarlo localmente
-
-Si deseas clonar el proyecto y probarlo en tu máquina:
-
-```bash
-# Clona este repositorio
-git clone https://github.com/davida282/Portafolio.git
-
-# Entra en el directorio
-cd Portafolio
-
-# Abre el archivo principal en tu navegador
-start index.html
+El contenido profesional se basa en la hoja de vida proporcionada por David. Para actualizar proyectos, estudios o enlaces, edita `index.html` y reemplaza el PDF en `assets` cuando sea necesario.

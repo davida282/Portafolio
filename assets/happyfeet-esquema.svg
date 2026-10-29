@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Esquema del sistema HappyFeet</title>
+  <desc id="desc">Los menús de consola conectan con controladores, acceso a datos mediante DAO y JDBC, y una base de datos MySQL.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#10253b"/>
+      <stop offset="1" stop-color="#163852"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#45c7bb"/>
+      <stop offset="1" stop-color="#7aa9ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <g opacity=".09" stroke="#d3ecfa">
+    <path d="M0 110H1280M0 220H1280M0 330H1280M0 440H1280M0 550H1280M0 660H1280"/>
+    <path d="M110 0V720M220 0V720M330 0V720M440 0V720M550 0V720M660 0V720M770 0V720M880 0V720M990 0V720M1100 0V720M1210 0V720"/>
+  </g>
+  <text x="76" y="99" fill="#85f0df" font-family="monospace" font-size="22" letter-spacing="4">HAPPYFEET / ESQUEMA DEL SISTEMA</text>
+  <text x="76" y="166" fill="#f5fbff" font-family="Arial,sans-serif" font-size="51" font-weight="700">De la cita al dato.</text>
+  <text x="78" y="206" fill="#b8ccdc" font-family="Arial,sans-serif" font-size="22">Aplicación de consola · gestión veterinaria</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="75" y="291" width="235" height="169" rx="14" fill="#1c3e56" stroke="#467589" stroke-width="2"/>
+    <text x="99" y="335" fill="#85f0df" font-family="monospace" font-size="18">01 / ENTRADA</text>
+    <text x="99" y="389" fill="#fff" font-size="31" font-weight="700">Menús</text>
+    <text x="99" y="425" fill="#b8ccdc" font-size="20">de consola</text>
+    <rect x="372" y="291" width="235" height="169" rx="14" fill="#1c3e56" stroke="#467589" stroke-width="2"/>
+    <text x="396" y="335" fill="#85f0df" font-family="monospace" font-size="18">02 / FLUJO</text>
+    <text x="396" y="389" fill="#fff" font-size="29" font-weight="700">Controladores</text>
+    <text x="396" y="425" fill="#b8ccdc" font-size="20">y servicios</text>
+    <rect x="669" y="291" width="235" height="169" rx="14" fill="#1c3e56" stroke="#467589" stroke-width="2"/>
+    <text x="693" y="335" fill="#85f0df" font-family="monospace" font-size="18">03 / ACCESO</text>
+    <text x="693" y="389" fill="#fff" font-size="31" font-weight="700">DAO + JDBC</text>
+    <text x="693" y="425" fill="#b8ccdc" font-size="20">operaciones CRUD</text>
+    <rect x="966" y="291" width="235" height="169" rx="14" fill="#1c3e56" stroke="#467589" stroke-width="2"/>
+    <text x="990" y="335" fill="#85f0df" font-family="monospace" font-size="18">04 / DATOS</text>
+    <text x="990" y="389" fill="#fff" font-size="31" font-weight="700">MySQL</text>
+    <text x="990" y="425" fill="#b8ccdc" font-size="20">base relacional</text>
+  </g>
+  <g stroke="url(#accent)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M321 375H358M347 365l11 10-11 10"/>
+    <path d="M618 375H655M644 365l11 10-11 10"/>
+    <path d="M915 375H952M941 365l11 10-11 10"/>
+  </g>
+  <text x="77" y="548" fill="#9dbacd" font-family="monospace" font-size="19" letter-spacing="2">ENTIDADES QUE ORGANIZA</text>
+  <g font-family="Arial,sans-serif" font-size="23" fill="#e9f6fa">
+    <rect x="76" y="575" width="202" height="54" rx="27" fill="#22485f" stroke="#4a7886"/>
+    <text x="112" y="610">Mascotas</text>
+    <rect x="292" y="575" width="170" height="54" rx="27" fill="#22485f" stroke="#4a7886"/>
+    <text x="336" y="610">Citas</text>
+    <rect x="476" y="575" width="260" height="54" rx="27" fill="#22485f" stroke="#4a7886"/>
+    <text x="508" y="610">Estados de cita</text>
+    <rect x="750" y="575" width="205" height="54" rx="27" fill="#22485f" stroke="#4a7886"/>
+    <text x="788" y="610">Especies</text>
+    <rect x="969" y="575" width="170" height="54" rx="27" fill="#22485f" stroke="#4a7886"/>
+    <text x="1016" y="610">Razas</text>
+  </g>
+</svg>

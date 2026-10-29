@@ -1,379 +1,220 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portafolio — David Alejandro Ardila Cardozo</title>
-  <!-- Google Font (puedes cambiar luego) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Estilos mínimos para que se vea bacano sin depender de archivos externos.
-       Cuando quieras, hacemos un CSS separado. -->
-  <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --accent:#2dd4bf;
-      --muted:#9aa4b2;
-      --glass: rgba(255,255,255,0.03);
-      color-scheme: dark;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg,#071029 0%, #081228 100%);
-      color:#e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      padding:24px;
-    }
-
-    /* Layout */
-    .container{
-      max-width:1100px;
-      margin:0 auto;
-      display:grid;
-      grid-template-columns: 320px 1fr;
-      gap:28px;
-      align-items:start;
-    }
-
-    /* Sidebar */
-    .sidebar{
-      background:var(--card);
-      border-radius:12px;
-      padding:20px;
-      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
-      position:sticky;
-      top:24px;
-      height:fit-content;
-    }
-    .photo{
-      width:100%;
-      border-radius:10px;
-      object-fit:cover;
-      height:320px;
-      background: linear-gradient(135deg,var(--accent), #60a5fa);
-      display:block;
-    }
-    .name{
-      margin-top:14px;
-      font-size:20px;
-      font-weight:800;
-      letter-spacing:0.3px;
-    }
-    .role{
-      margin-top:6px;
-      color:var(--muted);
-      font-size:13px;
-      font-weight:600;
-    }
-    .section-title{
-      margin-top:18px;
-      font-size:12px;
-      color:var(--muted);
-      text-transform:uppercase;
-      letter-spacing:1px;
-    }
-    .meta-list{list-style:none;padding:0;margin:8px 0 0 0}
-    .meta-list li{margin:8px 0;color:#cfe9ef;font-size:14px}
-    .skill-pill{
-      display:inline-block;
-      padding:6px 10px;
-      margin:6px 6px 6px 0;
-      border-radius:999px;
-      background:var(--glass);
-      font-size:13px;
-      color:var(--muted);
-    }
-
-    /* Main content */
-    main{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-      border-radius:12px;
-      padding:26px;
-      box-shadow:0 6px 18px rgba(2,6,23,0.45);
-      min-height:200px;
-    }
-    header.main-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:16px;
-    }
-    .intro{
-      margin:0;
-    }
-    .intro h1{
-      margin:0;
-      font-size:24px;
-      font-weight:800;
-    }
-    .intro p{margin:8px 0 0 0;color:var(--muted)}
-    .cta{
-      display:flex;
-      gap:10px;
-      align-items:center;
-    }
-    .btn{
-      background:var(--accent);
-      color:#042023;
-      padding:10px 14px;
-      border-radius:10px;
-      font-weight:700;
-      text-decoration:none;
-      font-size:14px;
-      box-shadow: 0 6px 14px rgba(45,212,191,0.12);
-    }
-    .btn.ghost{
-      background:transparent;
-      color:var(--muted);
-      border:1px solid rgba(255,255,255,0.04);
-    }
-
-    section.content-section{
-      margin-top:22px;
-    }
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.015), transparent);
-      padding:18px;
-      border-radius:10px;
-      margin-bottom:16px;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-    .row{display:flex;gap:16px;flex-wrap:wrap}
-    .service{
-      flex:1 1 220px;
-      min-width:180px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-      padding:14px;
-      border-radius:10px;
-    }
-    .service h4{margin:0 0 6px 0}
-    .projects-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
-      gap:12px;
-      margin-top:12px;
-    }
-    .project{
-      border-radius:10px;
-      overflow:hidden;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-      padding:10px;
-      min-height:120px;
-    }
-    .project img{width:100%;height:110px;object-fit:cover;border-radius:8px;}
-    .small{font-size:13px;color:var(--muted)}
-
-    footer.portfolio-footer{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      margin-top:18px;
-      align-items:center;
-    }
-
-    /* Responsiveness */
-    @media (max-width:980px){
-      .container{grid-template-columns: 1fr; padding-bottom:56px}
-      .sidebar{position:relative; top:auto}
-    }
-
-    #particles{
-  position:fixed;
-  inset:0;
-  z-index:-1;
-}
-
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f6fa">
+  <meta name="description" content="Portafolio de David Alejandro Ardila Cardozo, desarrollador backend junior. Proyectos académicos con Java, Spring Boot, JDBC, MySQL y JavaScript.">
+  <title>David Ardila — Desarrollador backend junior</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316263e'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-size='27' font-weight='700'%3EDA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="particles"></div>
-  <div class="container" role="main">
-    <!-- SIDEBAR -->
-    <aside class="sidebar" aria-label="Perfil y datos">
-      <!-- FOTO: reemplaza src con tu foto real -->
-      <img class="photo" src="assets/Perfil.jpg" alt="Foto de David Alejandro Ardila Cardozo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 600%22><rect width=%22600%22 height=%22600%22 fill=%22%230e1b2a%22/><text x=%2230%25%22 y=%2255%25%22 fill=%22%23ffffff%22 font-size=%2240%22 font-family=%22Arial%22>Sube tu foto</text></svg>'" />
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-      <div style="margin-top:12px">
-        <div class="name">David Alejandro Ardila Cardozo</div>
-        <div class="role">Desarrollador Junior Fullstack</div>
-      </div>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#inicio" aria-label="David Ardila, ir al inicio">
+        <span class="brand-mark" aria-hidden="true">DA<span class="brand-dot">.</span></span>
+        <span class="brand-name">David Ardila</span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#formacion">Formación</a>
+        <a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
 
-      <div class="section-title">Contacto</div>
-      <ul class="meta-list">
-        <li>📍 Bucaramanga, Colombia</li>
-        <li>✉️ <a href="mailto:davidardila1228@gmail.com" style="color:inherit;text-decoration:none">davidardila1228@gmail.com</a></li>
-        <li>📱 +57 300 841 2389</li>
-        <li class="small">GitHub · LinkedIn · Portafolio</li>
-      </ul>
-
-      <div class="section-title">Habilidades</div>
-      <div style="margin-top:8px">
-        <span class="skill-pill">JavaScript</span>
-        <span class="skill-pill">HTML</span>
-        <span class="skill-pill">CSS</span>
-        <span class="skill-pill">Node.js</span>
-        <span class="skill-pill">Firebase</span>
-        <span class="skill-pill">MySQL</span>
-        <span class="skill-pill">Python</span>
-        <span class="skill-pill">Java</span>
-        <span class="skill-pill">PostgreSQL</span>
-      </div>
-
-      <div class="section-title">Educación</div>
-      <div style="margin-top:8px">
-        <div class="small">Técnico en programación fullstack básica — Campuslands (Ene - Nov 2025)</div>
-        <div class="small" style="margin-top:6px">Bachiller — I.E. San José de la Salle (2024)</div>
-      </div>
-
-      
-    </aside>
-
-    <!-- MAIN -->
-    <main>
-      <header class="main-header">
-        <div class="intro">
-          <h1>Hola, soy David 👋</h1>
-          
+  <main id="contenido">
+    <section class="hero shell" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> PORTAFOLIO DE DESARROLLO DE SOFTWARE</p>
+        <h1 id="hero-title">Hola, soy David.<br><span>Desarrollador backend junior.</span></h1>
+        <p class="hero-intro">Construyo aplicaciones que organizan información y hacen más simples los procesos. Mi experiencia práctica viene de proyectos académicos con Java, bases de datos y desarrollo web.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="assets/Hoja%20de%20Vida.pdf" download="David_Ardila_Hoja_de_Vida.pdf">Descargar hoja de vida <span aria-hidden="true">↓</span></a>
         </div>
-
-        <div class="cta">
-          <a class="btn" href="#contact">Contrátame</a>
-          <a class="btn ghost" href="#projects">Ver proyectos</a>
+        <p class="hero-location"><span class="location-dot" aria-hidden="true"></span> Bucaramanga, Colombia</p>
+      </div>
+      <aside class="focus-panel" aria-label="Áreas de enfoque">
+        <div class="focus-header">
+          <span class="focus-kicker">ENFOQUE</span>
+          <span class="focus-symbol" aria-hidden="true">↗</span>
         </div>
-      </header>
+        <p class="focus-title">Del problema<br>al sistema.</p>
+        <p class="focus-description">Me interesa conectar la lógica de negocio, los datos y una interfaz útil.</p>
+        <div class="focus-lines" aria-label="Tecnologías y prácticas principales">
+          <div><span>01</span><strong>Backend</strong><span>Java · Spring Boot</span></div>
+          <div><span>02</span><strong>Datos</strong><span>JDBC · MySQL</span></div>
+          <div><span>03</span><strong>Web</strong><span>JavaScript · HTML · CSS</span></div>
+        </div>
+      </aside>
+    </section>
 
-      <!-- PERFIL / PRESENTACIÓN -->
-      <section id="perfil" class="content-section card" aria-labelledby="perfil-title">
-        <h2 id="perfil-title">Presentación de perfil</h2>
-        <p class="small" style="margin-top:6px">
-          Estudiante de Ingeniería de Sistemas con formación intensiva en desarrollo web Fullstack en Campuslands. He trabajado en diversos proyectos tecnológicos como desarrollar una red social de música llamada WatchPub (CampusLands - Marzo), crear una página web para bodas (Campus - Mayo), crear una página de gestión bancaria llamada ACME Bank (Campus - Junio), integrando tecnologías como JavaScript, Firebase, MySQL, HTML, CSS, JAVA, Python y frameworks modernos.
-
-Tengo una visión integral del desarrollo: me gusta tanto el código limpio como el diseño funcional y la experiencia del usuario. Me interesa crear soluciones tecnológicas sostenibles, escalables y con propósito, pero sin dejar de lado mi parte más creativa y humana. 
-
-Además, tengo una fuerte inclinación por la escritura, el análisis existencial y el arte como medio de expresión y reflexión. Sueño con escribir historias que marquen, mientras desarrollo tecnología que transforme.
-        </p>
-      </section>
-
-      <!-- OBJETIVOS PROFESIONALES -->
-      <section id="objetivos" class="content-section card" aria-labelledby="obj-title">
-        <h3 id="obj-title">Objetivos profesionales</h3>
-        <ul style="margin-top:10px">
-          <li>Convertirme en desarrollador Fullstack competente en 2 años, trabajando en productos reales.</li>
-          <li>Dominar arquitecturas backend con Node.js y bases de datos relacionales.</li>
-          <li>Construir proyectos escalables que aporten valor a pequeñas empresas en Bucaramanga.</li>
-        </ul>
-      </section>
-
-      <!-- MISIÓN / VISIÓN / VALORES -->
-      <section id="mision" class="content-section card" aria-labelledby="mision-title">
-        <h3 id="mision-title">Misión, Visión y Valores</h3>
-        <p style="margin-top:8px"><strong>Misión:</strong> Crear soluciones web eficientes que faciliten procesos y mejoren la experiencia del usuario.</p>
-        <p><strong>Visión:</strong> En 5 años ser referente local en desarrollo web y mentor para otros jóvenes que quieran entrar a tecnología.</p>
-        <p><strong>Valores:</strong> Responsabilidad, curiosidad, creatividad y resiliencia.</p>
-      </section>
-
-      <!-- SERVICIOS -->
-      <section id="services" class="content-section card" aria-labelledby="services-title">
-        <h3 id="services-title">Servicios</h3>
-        <div class="row" style="margin-top:12px">
-          <div class="service">
-            <h4>Desarrollo Web Frontend</h4>
-            <p class="small">Creación de interfaces responsivas con HTML/CSS/JS y buenas prácticas de accesibilidad.</p>
-            <p class="small" style="margin-top:8px"><strong>Precio estimado:</strong> Desde $25.000 COP</p>
+    <section class="section section-projects" id="proyectos" aria-labelledby="projects-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">TRABAJO SELECCIONADO</p>
+            <h2 id="projects-title">Proyectos académicos<span class="period">.</span></h2>
           </div>
-          <div class="service">
-            <h4>APIs y Backend</h4>
-            <p class="small">APIs con Node.js, autenticación con Firebase, integración con bases de datos, backend con Java y tecnología SpringBoot.</p>
-            <p class="small" style="margin-top:8px"><strong>Precio estimado:</strong> Desde $60.000 COP</p>
+          <p class="section-summary">Tres proyectos que muestran cómo resuelvo problemas de gestión, datos e interacción.</p>
+        </div>
+
+        <div class="projects-list">
+          <article class="project-card">
+            <div class="project-topline"><span>01 / BANCA SIMULADA</span><span>2025</span></div>
+            <div class="project-content">
+              <div class="project-main">
+                <h3>ACME Bank</h3>
+                <p>Aplicación web de autogestión bancaria simulada para crear usuarios, consultar saldos y realizar operaciones.</p>
+                <figure class="project-visual">
+                  <img src="assets/acme-bank-preview.png" alt="Pantalla de inicio de sesión de la demo pública de ACME Bank" loading="lazy">
+                  <figcaption>Captura de la demo pública <a href="assets/acme-bank-preview.png" target="_blank" rel="noopener noreferrer">Ampliar ↗</a></figcaption>
+                </figure>
+              </div>
+              <div class="project-detail">
+                <p class="detail-label">EL RETO</p>
+                <p>Representar operaciones bancarias habituales en una aplicación de práctica clara para el usuario.</p>
+                <p class="detail-label">MI APORTE</p>
+                <p>Desarrollé la lógica de interacción e implementé validaciones de datos para mejorar la consistencia de la información y la experiencia de uso.</p>
+                <p class="detail-label">RESULTADO</p>
+                <p>Un flujo de banca simulada que puede explorarse en una demo pública. No procesa dinero real.</p>
+                <div class="tags" aria-label="Tecnologías de ACME Bank"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+                <div class="project-links">
+                  <a class="text-link" href="https://banco-acme-chi.vercel.app" target="_blank" rel="noopener noreferrer">Abrir demo <span aria-hidden="true">↗</span></a>
+                  <a class="text-link" href="https://github.com/davida282/Banco-ACME-" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>02 / CONTROL DE INVENTARIO</span><span>2025</span></div>
+            <div class="project-content">
+              <div class="project-main">
+                <h3>Gestión de Bodegas</h3>
+                <p>Sistema para registrar productos, controlar inventario y gestionar entradas y salidas de una bodega.</p>
+                <figure class="project-visual">
+                  <img src="assets/gestion-bodegas-preview.png" alt="Pantalla de acceso del sistema Gestión de Bodegas" loading="lazy">
+                  <figcaption>Captura de la pantalla de acceso del repositorio <a href="assets/gestion-bodegas-preview.png" target="_blank" rel="noopener noreferrer">Ampliar ↗</a></figcaption>
+                </figure>
+              </div>
+              <div class="project-detail">
+                <p class="detail-label">EL RETO</p>
+                <p>Registrar movimientos de productos sin perder el control de las existencias en bodega.</p>
+                <p class="detail-label">MI APORTE</p>
+                <p>Participé en componentes de backend y frontend, y construí funcionalidades de inventario con reglas de negocio para reducir inconsistencias de stock dentro de un proyecto en equipo.</p>
+                <p class="detail-label">RESULTADO</p>
+                <p>Un sistema para registrar, actualizar y controlar productos, entradas y salidas de inventario.</p>
+                <div class="tags" aria-label="Tecnologías de Gestión de Bodegas"><span>Java</span><span>Spring Boot</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+                <a class="text-link" href="https://github.com/NicolasArrCh/gestionbodegas" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>03 / GESTIÓN VETERINARIA</span><span>2025</span></div>
+            <div class="project-content">
+              <div class="project-main">
+                <h3>HappyFeet</h3>
+                <p>Aplicación de consola para administrar especies, razas, mascotas, citas y estados de citas de una clínica veterinaria.</p>
+                <figure class="project-visual">
+                  <img src="assets/happyfeet-esquema.svg" alt="Esquema del flujo de HappyFeet: menús de consola, controladores, acceso a datos con DAO y JDBC, y MySQL" loading="lazy">
+                  <figcaption>Esquema basado en la estructura del repositorio <a href="assets/happyfeet-esquema.svg" target="_blank" rel="noopener noreferrer">Ampliar ↗</a></figcaption>
+                </figure>
+              </div>
+              <div class="project-detail">
+                <p class="detail-label">EL RETO</p>
+                <p>Ordenar los datos de pacientes y citas para consultarlos y actualizarlos desde un mismo sistema.</p>
+                <p class="detail-label">MI APORTE</p>
+                <p>Co-desarrollé el sistema, implementé operaciones CRUD y acceso a MySQL mediante JDBC, interfaces DAO y una conexión Singleton. Organicé el código por capas para facilitar su mantenimiento.</p>
+                <p class="detail-label">RESULTADO</p>
+                <p>Una aplicación de consola que gestiona especies, razas, mascotas, citas y sus estados.</p>
+                <div class="tags" aria-label="Tecnologías de HappyFeet"><span>Java 17</span><span>JDBC</span><span>MySQL</span><span>Maven</span></div>
+                <a class="text-link" href="https://github.com/NicolasArrCh/HappyFeet_Veterinaria_ArdilaDavid_ArrublaNicolas" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="habilidades" aria-labelledby="skills-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">HERRAMIENTAS Y CONOCIMIENTOS</p>
+            <h2 id="skills-title">Habilidades<span class="period">.</span></h2>
           </div>
-          
+          <p class="section-summary">Tecnologías que he aplicado en mi formación y en proyectos de desarrollo.</p>
         </div>
-      </section>
-
-      <!-- PROYECTOS -->
-<section id="projects" class="content-section card" aria-labelledby="projects-title">
-  <h3 id="projects-title">Proyectos</h3>
-  <p class="small" style="margin-top:8px">Aquí algunos proyectos destacados.</p>
-
-  <div class="projects-grid">
-    <!-- Proyecto 1 -->
-    <article class="project" aria-labelledby="p1">
-      <a href="https://github.com/davida282/DESARROLLO-DE-UNA-RED-SOCIAL-EN-PYTHON" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
-        <h4 id="p1" style="margin:8px 0 4px 0;">WatchPub</h4>
-        <div class="small">Plataforma tipo red social para compartir ideas, foros e inspiración musical. (Python)</div>
-      </a>
-    </article>
-
-    <!-- Proyecto 2 -->
-    <article class="project" aria-labelledby="p2">
-      <a href="https://github.com/NicolasArrCh/HappyFeet_Veterinaria_ArdilaDavid_ArrublaNicolas" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
-        <h4 id="p2" style="margin:8px 0 4px 0;">Gestión de Veterinaria — HappyFeet</h4>
-        <div class="small">Aplicación para la administración completa de una veterinaria: pacientes, citas, inventario y facturación. (Java + MySQL)</div>
-      </a>
-    </article>
-
-    <!-- Proyecto 3 -->
-    <article class="project" aria-labelledby="p3">
-      <a href="https://github.com/davida282/ProyectoAcmebank_JavaScript_ArdilaDavidQuinonezPedro" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
-        <h4 id="p3" style="margin:8px 0 4px 0;">Banco ACME</h4>
-        <div class="small">Simulación de banca digital con autenticación, consignaciones y consultas. (JavaScript + Firebase)</div>
-      </a>
-    </article>
-
-    <!-- Proyecto 4 -->
-    <article class="project" aria-labelledby="p4">
-      <a href="https://github.com/davida282/PROYECTO-CSS-HTML" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
-        <h4 id="p4" style="margin:8px 0 4px 0;">Sitio Web de Fotografía de Bodas</h4>
-        <div class="small">Diseño web profesional en HTML y CSS para promoción de servicios fotográficos. (CampusLands - Mayo 2025)</div>
-      </a>
-    </article>
-
-    <!-- Proyecto 5 -->
-    <article class="project" aria-labelledby="p5">
-      <a href="https://github.com/davida282/JolganPardo_DavidArdila_ProyectoMySQL" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
-        <h4 id="p5" style="margin:8px 0 4px 0;">Gestión de Finca Agrícola</h4>
-        <div class="small">Base de datos para control de producción, inventario y ventas en finca agrícola. (MySQL - Agosto 2025)</div>
-      </a>
-    </article>
-  </div>
-</section>
-
-
-      
-
-      <!-- DATOS DE CONTACTO -->
-      <section id="contact" class="content-section card" aria-labelledby="contact-title">
-        <h3 id="contact-title">Datos de contacto</h3>
-        <p class="small" style="margin-top:8px">¿Quieres que trabajemos juntos? Contáctame:</p>
-        <ul class="meta-list" style="margin-top:8px">
-          <li>✉️ Email: <a href="mailto:davidardila1228@gmail.com" style="color:inherit;text-decoration:none">davidardila1228@gmail.com</a></li>
-          <li>📱 Tel: +57 300 841 2389</li>
-          <li>🔗 GitHub: <a href="https://github.com/davida282" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">https://github.com/davida282</a></li>
-          <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/david-alejandro-ardila-cardozo-882564378/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">https://www.linkedin.com/in/david-alejandro-ardila-cardozo-882564378/</a></li>
-        </ul>
-
-        <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
-          <a class="btn"
-href="https://mail.google.com/mail/?view=cm&fs=1&to=davidardila1228@gmail.com&su=Contacto%20desde%20portafolio&body=Hola%20David,%0D%0AVi%20tu%20portafolio%20y%20me%20gustaría%20trabajar%20contigo."
-target="_blank">
-  Enviar correo
-</a>
-          <a class="btn ghost" href="assets/Hoja de Vida.pdf" download>Descargar CV</a>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <span class="skill-index">01</span>
+            <h3>Backend y datos</h3>
+            <p>Java · Spring Boot · JDBC · MySQL · SQL · patrón DAO · arquitectura por capas</p>
+          </div>
+          <div class="skill-group">
+            <span class="skill-index">02</span>
+            <h3>Desarrollo web</h3>
+            <p>JavaScript · HTML · CSS · React · Python</p>
+          </div>
+          <div class="skill-group">
+            <span class="skill-index">03</span>
+            <h3>Herramientas y equipo</h3>
+            <p>Git · GitHub · Maven · IntelliJ IDEA · Scrum · trabajo colaborativo</p>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <footer class="portfolio-footer">
-        <div class="small">Hecho por David Ardila — Portafolio simple y profesional.</div>
-      </footer>
-    </main>
-  </div>
+    <section class="section education-section" id="formacion" aria-labelledby="education-title">
+      <div class="shell education-layout">
+        <div class="education-heading">
+          <p class="section-label">MI RECORRIDO</p>
+          <h2 id="education-title">Formación<span class="period">.</span></h2>
+          <p>Continúo fortaleciendo mis bases en desarrollo de software y sistemas informáticos.</p>
+        </div>
+        <div class="education-list">
+          <div class="education-item">
+            <span class="education-date">2026 — ACTUALIDAD</span>
+            <div><h3>Tecnología en Desarrollo de Sistemas Informáticos</h3><p>Unidades Tecnológicas de Santander</p></div>
+          </div>
+          <div class="education-item">
+            <span class="education-date">2025 — ACTUALIDAD</span>
+            <div><h3>Programación · en formación</h3><p>Campuslands, Floridablanca</p></div>
+          </div>
+          <div class="education-note"><span>IDIOMAS</span><strong>Inglés · B1</strong></div>
+        </div>
+      </div>
+    </section>
 
+    <section class="contact-section" id="contacto" aria-labelledby="contact-title">
+      <div class="shell contact-layout">
+        <div>
+          <p class="section-label">CONTACTO</p>
+          <h2 id="contact-title">Hablemos de una<br>oportunidad<span>.</span></h2>
+          <p>Estoy abierto a oportunidades para aprender, aportar y seguir creciendo como desarrollador.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-light" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=davidardila1228@gmail.com&amp;su=Contacto%20desde%20tu%20portafolio&amp;body=Hola%20David%2C%0A%0AVi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20una%20oportunidad.%0A%0ASaludos%2C" target="_blank" rel="noopener noreferrer">Escríbeme por Gmail <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/davida282" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/david-alejandro-ardila-cardozo-882564378/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="assets/Hoja%20de%20Vida.pdf" download="David_Ardila_Hoja_de_Vida.pdf">Hoja de vida <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    
+  <footer class="site-footer">
+    <div class="shell footer-inner"><span>© David Alejandro Ardila Cardozo</span><a href="#inicio">Volver arriba ↑</a></div>
+  </footer>
 </body>
 </html>
